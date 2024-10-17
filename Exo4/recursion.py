@@ -1,16 +1,35 @@
 ## Question 4 - Récursion
 
-##import logging
+import logging
 
-def recur_sum(n):
-    # Cas de base : si n est égal à 1, retourne 1 (car 1 / 1 = 1)
-    if n == 1:
-        return 1
-    # Appel récursif : additionner 1/n au résultat de harmonic_sum(n-1)
-    else:
-        return 1 / n + recur_sum(n - 1)
+# Configurer le logging pour afficher les messages dans la console
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Exemple d'utilisation
-n = 4
-resultat = recur_sum(n)
-print(f"La somme harmonique jusqu'au terme {n} est : {resultat}")
+try:
+    # Demander à l'utilisateur d'entrer un nombre
+    n = int(input("Entrer un nombre:"))
+    logging.info(f"Nombre saisi : {n}")
+
+    # Tant que le nombre est inférieur à 1, redemander un nombre
+    while n < 1:
+        logging.warning("Le nombre doit être supérieur ou égal à 1.")
+        n = int(input("Entrer un nombre:"))
+        logging.info(f"Nombre mis à jour : {n}")
+
+    # Initialisation de variables
+    i = 1
+    s = 0
+    logging.debug(f"Initialisation de i={i}, s={s}")
+
+    # Boucle pour calculer la somme harmonique
+    while i <= n:
+        s += 1 / i
+        logging.debug(f"i={i}, somme partielle={s:.2f}")
+        i += 1
+
+    # Affichage du résultat
+    logging.info(f"La somme harmonique est : {s:.2f}")
+    print(f"La somme est : {s:.2f}")
+
+except ValueError as e:
+    logging.error(f"Erreur de saisie : {e}")
