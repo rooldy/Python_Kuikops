@@ -3,6 +3,7 @@ Description du Projet
 Ce projet contient plusieurs exercices pratiques en Python que j'ai réalisés dans le cadre d'un TP. Les exercices couvrent divers sujets, tels que la manipulation des boucles, les conditions, l'utilisation des bibliothèques Python comme logging, et la gestion des exceptions.
 
 Liste des Exercices :
+
 Exercice 1 - Deviner le Nombre
 
 Description : Un jeu simple où l'utilisateur doit deviner un nombre choisi aléatoirement par l'ordinateur.
