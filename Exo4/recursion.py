@@ -1,5 +1,7 @@
 ## Question 4 - Récursion
 
+##import logging
+
 def recur_sum(n):
     # Cas de base : si n est égal à 1, retourne 1 (car 1 / 1 = 1)
     if n == 1:

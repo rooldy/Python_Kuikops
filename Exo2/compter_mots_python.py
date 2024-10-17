@@ -1,8 +1,8 @@
-def count_python_in_file():
-    attempts = 0
-    max_attempts = 3
+def count_python():
+    essai = 0
+    max_essai = 3
 
-    while attempts < max_attempts:
+    while essai < max_essai:
         try:
             # Demande le nom du fichier à l'utilisateur
             file_name = input("Entrez le nom du fichier (ex: test.txt) : ")
@@ -12,16 +12,16 @@ def count_python_in_file():
                 content = file.read()
 
             # Compte le nombre d'occurrences de "python"
-            word_count = content.lower().count('python')
-            print(f"Le mot 'python' apparaît {word_count} fois dans le fichier.")
+            compter = content.lower().count('python')
+            print(f"Le mot 'python' apparaît {compter} fois dans le fichier.")
             break
 
         except FileNotFoundError:
             attempts += 1
-            print(f"Erreur : le fichier '{file_name}' n'a pas été trouvé. Tentative {attempts}/{max_attempts}.")
+            print(f"Erreur : le fichier '{file_name}' n'a pas été trouvé. Tentative {essai}/{max_essai}.")
         
-        if attempts == max_attempts:
+        if attempts == max_essai:
             print("Erreur : le fichier n'a pas pu être trouvé après 3 tentatives. Fin du programme.")
 
 # Appeler la fonction
-count_python_in_file()
+count_python()
