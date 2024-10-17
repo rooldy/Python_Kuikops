@@ -1,4 +1,4 @@
-# Projet Python - TP Jeux et Scripts Python
+<h1> Projet Python - TP Jeux et Scripts Python </h1>
 Description du Projet
 Ce projet contient plusieurs exercices pratiques en Python que j'ai réalisés dans le cadre d'un TP. Les exercices couvrent divers sujets, tels que la manipulation des boucles, les conditions, l'utilisation des bibliothèques Python comme logging, et la gestion des exceptions.
 
